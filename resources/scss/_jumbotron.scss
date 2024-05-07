@@ -1,0 +1,19 @@
+.jumbotron {
+    background-image: url('../../public/img/jumbotron.jpg');
+    background-size: cover;
+    height: 500px;
+    position: relative;
+
+    .section-title {
+        background-color: #0d6efd;
+        position: absolute;
+        
+        span {
+            color: white;
+            font-size: 26px;
+            font-weight:700;
+        }
+    
+        bottom: -30px;
+    }
+}
