@@ -14,16 +14,22 @@
 <div class="section-black">
     <div class="container py-5 d-flex flex-column justify-content-center align-items-center">
         <div class="row gap-2">
-            @foreach ($comics as $comic)
+            @forelse ($comics as $index => $comic)
                 <div class="col">
+                    <a href="{{ route('comic.show', ['id' => $index]) }}">
                     <div class="card">
                         <div class="card-img-container">
-                            <img src="{{$comic['thumb']}}" class="card-img-top" alt="" style="backgrouns-size: cover;">
+                            <img src="{{ $comic['thumb'] }}" class="card-img-top" alt="" style="backgrouns-size: cover;">
                         </div>
-                            <span class="card-title">{{$comic['title']}}</span>
+                            <span class="card-title">{{ $comic['title'] }}</span>
                     </div>
+                    </a>
                 </div>
-            @endforeach
+            @empty
+                <div class="col">
+                    <p>No comics available</p>
+                </div>
+            @endforelse
 
         </div>
 
@@ -61,6 +67,5 @@
         </div>
     </div>
 </div>
-
 
 @endsection

@@ -16,9 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     
     $comics = config('db.comics');
-    return view('home', compact('comics'));
+    return view('comics.index', compact('comics'));
 })->name('home');
 
-Route::get('/comic', function () {
-    return view('comic');
-})->name('comic');
+Route::get('/comic/{id}', function ($id) {
+    $comics = config('db.comics');
+    $comic = $comics[$id];
+    return view('comics.show', compact('comic'));
+})->name('comic.show');
