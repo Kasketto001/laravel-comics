@@ -4,8 +4,8 @@
 <div class="jumbotron">
 
 <div class="container">
-    <div class="section-title py-3 px-4">
-        <span>CURRENT SERIES</span>
+    <div class="section-title">
+        <span class="py-3 px-4">CURRENT SERIES</span>
     </div>
 </div>
 

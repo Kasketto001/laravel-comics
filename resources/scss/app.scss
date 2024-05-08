@@ -1,9 +1,9 @@
-@import '~bootstrap/scss/bootstrap';
+@use '~bootstrap/scss/bootstrap';
 
-@import './header.scss';
-@import './_jumbotron.scss';
-@import './footer.scss';
-
+@use './header.scss';
+@use './_jumbotron.scss';
+@use './footer.scss';
+@use './comic.scss';
 
 
 .section-black {
